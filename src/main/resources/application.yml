@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: realtime-promotion-pubsub
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 3000ms
+
+promotion:
+  redis:
+    channel: promotion-updates
+
+logging:
+  level:
+    com.example.promotion: DEBUG
